@@ -1,1 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Katsu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+    }
 
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle at top, #3a3a7a, #1b1745);
+      color: #fff;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 420px;
+      padding: 32px 20px;
+      text-align: center;
+    }
+
+    .avatar {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      margin: 0 auto 16px;
+      background: #fff;
+      overflow: hidden;
+    }
+
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    h1 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 24px;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(6px);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .link:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: translateY(-2px);
+    }
+
+    .link img {
+      width: 20px;
+      height: 20px;
+    }
+
+    footer {
+      margin-top: 28px;
+      font-size: 0.75rem;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <div class="avatar">
+      <!-- Replace avatar.png with your own image -->
+      <img src="https://cdn.discordapp.com/avatars/1120490012153237544/4eaf5dd68aacabf27ad25194d6429b7f.png?size=512" alt="Avatar" />
+    </div>
+
+    <h1>usbloadergx</h1>
+
+    <div class="links">
+      <!-- EDIT THE LINKS BELOW -->
+      <a class="link" href="https://nxapi-auth.fancy.org.uk/profile/P-tuQIVucgzl7AIcAQswiQ" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Nintendo_switch_logo.svg" alt="Nintendo" />
+        Nintendo
+      </a>
+      <a class="link" href="https://retroachievements.org/user/KatsuMaki" target="_blank">
+        <img src="https://static.retroachievements.org/assets/images/ra-icon.webp" alt="RA" />
+        RetroAchievements
+      </a>
+      <a class="link" href="https://example.com/xbox" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Xbox_one_logo.svg" alt="Xbox" />
+        Xbox
+      </a>
+      <a class="link" href="https://example.com/steam" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg" alt="Steam" />
+        Steam
+      </a>
+    </div>
+    <!-- RiiTag -->
+    <div style="margin-top:24px;">
+    <a href="https://riitag.t0g3pii.de/user/1120490012153237544" target="_blank">
+    <img src="https://riitag.t0g3pii.de/1120490012153237544/tag.png" alt="RiiTag" style="max-width:100%;" />
+    </a>
+    </div>
+    <footer>
+      DC : usbloadergx
+    </footer>
+  </main>
+</body>
+</html>

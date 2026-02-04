@@ -15,16 +15,17 @@
       font-family: 'Inter', sans-serif;
     }
 
-      body {
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #4f1818;
-        overflow: hidden;
-      }
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      /* FIX 1: Added a dark gradient background so the white glass buttons are visible */
+      background: linear-gradient(135deg, #1a0b0b, #4f1818); 
+      color: #fff; /* Changed text color to white to match dark background */
+      overflow-x: hidden; /* Prevent horizontal scroll */
+    }
 
-    
     .container {
       width: 100%;
       max-width: 420px;
@@ -39,6 +40,7 @@
       margin: 0 auto 16px;
       background: #fff;
       overflow: hidden;
+      border: 3px solid rgba(255,255,255,0.2); /* Added a slight border for style */
     }
 
     .avatar img {
@@ -51,6 +53,7 @@
       font-size: 1.4rem;
       font-weight: 700;
       margin-bottom: 24px;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
     }
 
     .links {
@@ -66,26 +69,33 @@
       gap: 10px;
       padding: 14px;
       border-radius: 999px;
-      background: rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.12); /* Glass effect */
       backdrop-filter: blur(6px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
       color: #fff;
       text-decoration: none;
       font-weight: 600;
-
-  /* 🔥 ADDED */
-  position: relative;
-  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
-}
+      
+      /* FIX 2: Fixed the syntax error and extra brackets here */
+      position: relative;
+      transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
     }
 
     .link:hover {
-      background: rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.25);
       transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
 
     .link img {
       width: 20px;
       height: 20px;
+      filter: drop-shadow(0 1px 2px rgba(0,0,0,0.2));
+    }
+
+    /* Nintendo Icon adjustment because the wikipedia link has transparency issues sometimes */
+    .link img[alt="Nintendo"] {
+        filter: brightness(0) invert(1);
     }
 
     footer {
@@ -98,16 +108,14 @@
 <body>
   <main class="container">
     <div class="avatar">
-      <!-- Replace avatar.png with your own image -->
       <img src="https://cdn.discordapp.com/avatars/1120490012153237544/4eaf5dd68aacabf27ad25194d6429b7f.png?size=512" alt="Avatar" />
     </div>
 
     <h1>usbloadergx</h1>
 
     <div class="links">
-      <!-- EDIT THE LINKS BELOW -->
       <a class="link" href="https://nxapi-auth.fancy.org.uk/profile/P-tuQIVucgzl7AIcAQswiQ" target="_blank">
-        <img src="https://fr.wikipedia.org/wiki/Fichier:Nintendo-switch-icon.png" alt="Nintendo" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Nintendo_Switch_logo%2C_square.png" alt="Nintendo" />
         Nintendo
       </a>
       <a class="link" href="https://retroachievements.org/user/KatsuMaki" target="_blank">
@@ -123,12 +131,13 @@
         Steam
       </a>
     </div>
-    <!-- RiiTag -->
+
     <div style="margin-top:24px;">
-    <a href="https://riitag.t0g3pii.de/user/1120490012153237544" target="_blank">
-    <img src="https://riitag.t0g3pii.de/1120490012153237544/tag.png" alt="RiiTag" style="max-width:180%;" />
-    </a>
+      <a href="https://riitag.t0g3pii.de/user/1120490012153237544" target="_blank">
+        <img src="https://riitag.t0g3pii.de/1120490012153237544/tag.png" alt="RiiTag" style="max-width:100%; height: auto; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);" />
+      </a>
     </div>
+
     <footer>
       DC : usbloadergx
     </footer>
